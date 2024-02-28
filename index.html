@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FrontEndTwo.css">
+    <script src="script.js" defer></script>
+    <title>Adult BMI Calculator</title>
+</head>
+<header>
+    <div class="header-overlay">
+        <h1>WeCareHealth</h1>
+    </div>
+</header>
+<body>
+    <div class="header_2">
+        <h2>We aim for better health awareness ● This is a BMI calculator for ages 20 years and older</h2>
+    </div>
+    <div class="main-container">
+        <div class="calculator">
+            <form id="bmiForm">
+                <label for="unit_system"><b>Choose unit system: </b></label>
+                <select id="unit_system" onchange="changeUnits()">
+                    <option value="Standard"><b>Standard (in / lb)</b></option>
+                    <option value="Metric" selected><b>Metric (cm / kg)</b></option>
+                </select>
+                <br>
+                <div class="input">
+                    <label for="height"><b>Height: </b></label>
+                    <input type="text" id="height" placeholder="Enter your height">
+                    <span id="heightUnit"><b>cm</b></span>
+                </div>
+                <br>
+                <div class="input">
+                    <label for="weight"><b>Weight: </b></label>
+                    <input type="text" id="weight" placeholder="Enter your weight">
+                    <span id="weightUnit"><b>kg</b></span>
+                </div>
+                <button type="button" onclick="calculateBMI()"><b>Calculate BMI</b></button>
+            </form>
+            <div id="result"></div>
+            <div class="link">
+                Convert your measurements <a href="https://ghostringg.github.io/WeCareHealth-measurement-converter/" target="_blank">here!</a></p>
+            </div>
+        </div>
+        <br>
+        <div id="bmiRange">
+            <p><b>BMI Categories:</b></p>
+            <p>Underweight = &lt;18.5</p>
+            <p>Normal weight = 18.5–24.9</p>
+            <p>Overweight = 25–29.9</p>
+            <p>Obesity = BMI of 30 or greater</p>
+        </div>
+    </div>
+    <script src="BackEnd.js"></script>
+</body>
+</html>
